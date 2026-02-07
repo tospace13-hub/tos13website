@@ -9,36 +9,42 @@
   --orange: #E87A1E;
   --orange-dark: #C96A15;
   --orange-light: #FFF3E6;
-  --dark: #1A1A1A;
-  --gray: #555;
-  --light-gray: #F5F5F5;
+  --black: #0A0A0A;
+  --dark: #141414;
+  --dark-mid: #1E1E1E;
+  --gray: #999;
+  --gray-light: #CCC;
   --white: #FFFFFF;
 }
 
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-  color: var(--dark);
+  color: var(--white);
   line-height: 1.7;
-  background: var(--white);
+  background: var(--black);
   overflow-x: hidden;
 }
 
 .container {
-  max-width: 960px;
+  max-width: 1040px;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 2rem;
 }
 
 /* === Header === */
 .site-header {
-  border-bottom: 3px solid var(--orange);
-  padding: 1.5rem 0;
+  background: var(--black);
+  border-bottom: 1px solid #222;
+  padding: 1.25rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .site-header .container {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1.25rem;
 }
 
 .logo-link {
@@ -46,15 +52,16 @@ body {
 }
 
 .logo {
-  height: 64px;
+  height: 48px;
   width: auto;
 }
 
 .site-title {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 700;
-  letter-spacing: -0.02em;
-  color: var(--dark);
+  letter-spacing: 0.05em;
+  color: var(--white);
+  text-transform: uppercase;
 }
 
 .site-title .highlight {
@@ -62,109 +69,239 @@ body {
 }
 
 .site-tagline {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   color: var(--gray);
-  margin-top: 0.15rem;
-}
-
-/* === Sections === */
-section {
-  padding: 3rem 0;
-}
-
-section + section {
-  border-top: 1px solid #E5E5E5;
+  margin-top: 0.1rem;
+  letter-spacing: 0.02em;
 }
 
 /* === Hero === */
 .hero {
-  padding: 4rem 0 3rem;
+  background: var(--dark);
+  padding: 6rem 2rem 5rem;
   text-align: center;
+  border-bottom: 1px solid #222;
+}
+
+.hero-inner {
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .hero h1 {
-  font-size: 2.4rem;
+  font-size: 3rem;
   font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: 1.25rem;
-  color: var(--dark);
+  line-height: 1.15;
+  color: var(--white);
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+}
+
+.hero h1 .highlight {
+  color: var(--orange);
 }
 
 .hero p {
   font-size: 1.15rem;
-  color: var(--gray);
-  max-width: 700px;
-  margin: 0 auto 2rem;
+  color: var(--gray-light);
+  max-width: 600px;
+  margin: 0 auto 2.5rem;
   line-height: 1.7;
 }
 
+/* === Buttons === */
 .btn {
   display: inline-block;
   background: var(--orange);
   color: var(--white) !important;
-  padding: 0.85rem 2.25rem;
-  font-size: 1rem;
+  padding: 1rem 2.5rem;
+  font-size: 0.9rem;
   font-weight: 700;
-  border-radius: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border-radius: 0;
   text-decoration: none;
   transition: background 0.2s;
 }
 
 .btn:hover {
   background: var(--orange-dark);
-  color: var(--white) !important;
   text-decoration: none;
+  color: var(--white) !important;
 }
 
-/* === Phase Grid === */
-.phases h2 {
-  text-align: center;
-  display: block;
-  border-bottom: none;
-  font-size: 1.8rem;
-  margin-bottom: 0.5rem;
+.btn-light {
+  background: var(--white);
+  color: var(--black) !important;
 }
 
-.phases > p {
-  text-align: center;
+.btn-light:hover {
+  background: var(--orange);
+  color: var(--white) !important;
+}
+
+/* === Manifesto === */
+.manifesto {
+  background: var(--black);
+  padding: 5rem 0;
+  border-bottom: 1px solid #222;
+}
+
+.manifesto h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--orange);
+  margin-bottom: 1.5rem;
+}
+
+.manifesto p {
+  font-size: 1.1rem;
+  color: var(--gray-light);
+  max-width: 700px;
+  margin-bottom: 1rem;
+}
+
+.manifesto strong {
+  color: var(--white);
+}
+
+/* === Impact Quadrant === */
+.quadrant {
+  background: var(--dark);
+  padding: 5rem 0;
+  border-bottom: 1px solid #222;
+}
+
+.quadrant h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--white);
+  margin-bottom: 0.75rem;
+}
+
+.quadrant-intro {
   color: var(--gray);
-  max-width: 650px;
-  margin: 0 auto 2.5rem;
+  font-size: 1.05rem;
+  margin-bottom: 2.5rem;
+  max-width: 600px;
+}
+
+.quadrant-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+}
+
+.quadrant-item {
+  padding: 2rem;
+  border: 1px solid #333;
+}
+
+.quadrant-label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--orange);
+  margin-bottom: 0.75rem;
+}
+
+.quadrant-item p {
+  color: var(--gray-light);
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* === Phases === */
+.phases {
+  background: var(--black);
+  padding: 5rem 0;
+  border-bottom: 1px solid #222;
+}
+
+.phases h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--white);
+  margin-bottom: 0.75rem;
+}
+
+.phases-intro {
+  color: var(--gray);
+  font-size: 1.05rem;
+  margin-bottom: 2.5rem;
+  max-width: 600px;
 }
 
 .phase-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
+  gap: 0;
 }
 
 .phase-card {
-  background: var(--light-gray);
-  border-radius: 10px;
-  padding: 1.75rem 1.5rem;
-  border-top: 4px solid var(--orange);
+  padding: 2.25rem 2rem;
+  border: 1px solid #333;
+  position: relative;
+}
+
+.phase-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--orange);
+}
+
+.phase-number {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--orange);
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+  font-variant-numeric: tabular-nums;
 }
 
 .phase-card h3 {
-  font-size: 1.1rem;
-  color: var(--orange);
-  margin-top: 0;
-  margin-bottom: 0.6rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
 }
 
 .phase-card p {
-  font-size: 0.925rem;
   color: var(--gray);
-  margin-bottom: 0;
+  font-size: 0.9rem;
+  margin: 0;
+  line-height: 1.6;
 }
 
-/* === Why Join / Benefits === */
+/* === Why Join === */
+.why-join {
+  background: var(--dark);
+  padding: 5rem 0;
+  border-bottom: 1px solid #222;
+}
+
 .why-join h2 {
-  text-align: center;
-  display: block;
-  border-bottom: none;
-  font-size: 1.8rem;
-  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--white);
+  margin-bottom: 2.5rem;
 }
 
 .benefits-grid {
@@ -174,99 +311,58 @@ section + section {
 }
 
 .benefit {
-  padding: 1.25rem 1.5rem;
-  border-left: 4px solid var(--orange);
-  background: var(--orange-light);
-  border-radius: 0 8px 8px 0;
-}
-
-.benefit p {
-  margin-bottom: 0;
-  font-size: 0.95rem;
+  padding: 1.75rem 2rem;
+  border-left: 3px solid var(--orange);
+  background: var(--dark-mid);
 }
 
 .benefit strong {
-  color: var(--dark);
-}
-
-/* === Details === */
-.details {
-  background: var(--light-gray);
-  margin: 0 -9999px;
-  padding: 3rem 9999px;
-}
-
-/* === Partners === */
-.partners h2 {
-  text-align: center;
   display: block;
-  border-bottom: none;
-  font-size: 1.8rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--orange);
+  margin-bottom: 0.6rem;
+}
+
+.benefit p {
+  color: var(--gray-light);
+  font-size: 0.925rem;
+  margin: 0;
+}
+
+/* === Partners / CTA === */
+.partners {
+  background: var(--orange);
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.partners h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--black);
   margin-bottom: 1.5rem;
 }
 
-.partner-list ul {
-  list-style: none;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0.6rem 2rem;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.partner-list li {
-  font-size: 0.925rem;
-  padding: 0.4rem 0;
-  border-bottom: 1px solid #E5E5E5;
-}
-
-/* === Partners CTA === */
-.partners > p {
-  text-align: center;
+.partners-intro {
+  color: var(--black);
+  font-size: 1.1rem;
   max-width: 600px;
-  margin: 2rem auto 1.5rem;
-  color: var(--gray);
-  font-size: 1.05rem;
+  margin: 0 auto 0.75rem;
+  opacity: 0.85;
 }
 
-.partners .btn {
-  display: block;
-  max-width: 280px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.partner-list li:last-child {
-  color: var(--orange);
-  font-weight: 600;
-  font-style: italic;
-  border-bottom: 2px solid var(--orange);
+.partners .btn-light {
+  margin-top: 1.5rem;
 }
 
 /* === Main Content Defaults === */
 .site-content {
   padding: 0;
   min-height: 60vh;
-}
-
-.site-content h2 {
-  font-size: 1.6rem;
-  border-bottom: 2px solid var(--orange);
-  padding-bottom: 0.3rem;
-  display: inline-block;
-  margin-top: 0;
-  margin-bottom: 0.75rem;
-}
-
-.site-content h3 {
-  font-size: 1.2rem;
-  color: var(--orange);
-}
-
-.site-content p {
-  margin-bottom: 1rem;
-  color: var(--dark);
 }
 
 .site-content a {
@@ -279,22 +375,14 @@ section + section {
   text-decoration: underline;
 }
 
-.site-content ul, .site-content ol {
-  margin-bottom: 1rem;
-  padding-left: 1.5rem;
-}
-
-.site-content li {
-  margin-bottom: 0.35rem;
-}
-
 /* === Footer === */
 .site-footer {
-  border-top: 3px solid var(--orange);
-  padding: 1.5rem 0;
+  background: var(--black);
+  border-top: 1px solid #222;
+  padding: 2rem 0;
   text-align: center;
   color: var(--gray);
-  font-size: 0.875rem;
+  font-size: 0.8rem;
 }
 
 .footer-initiative {
@@ -317,20 +405,20 @@ section + section {
 
 /* === Responsive === */
 @media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
   .phase-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .quadrant-grid {
     grid-template-columns: 1fr;
   }
 
   .benefits-grid {
     grid-template-columns: 1fr;
-  }
-
-  .partner-list ul {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .hero h1 {
-    font-size: 1.8rem;
   }
 }
 
@@ -341,22 +429,22 @@ section + section {
   }
 
   .site-title {
-    font-size: 1.75rem;
+    font-size: 1.25rem;
   }
 
   .logo {
-    height: 50px;
+    height: 40px;
   }
 
-  .partner-list ul {
-    grid-template-columns: 1fr;
+  .hero {
+    padding: 4rem 1.5rem 3rem;
   }
 
   .hero h1 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
   }
 
   section {
-    padding: 2rem 0;
+    padding: 3rem 0;
   }
 }

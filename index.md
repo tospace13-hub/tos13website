@@ -99,8 +99,8 @@ The project is led by **Eindhoven University of Technology (TU/e)** and backed b
 
 <div class="partner-list" markdown="1">
 
-- **TU/e** — Wearable Sensing Lab *(Lead)*
 <!-- Partners to be announced
+- **TU/e** — Wearable Sensing Lab *(Lead)*
 - **Vlisco**
 - **Bata Industrials**
 - **Avient**

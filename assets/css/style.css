@@ -101,10 +101,10 @@ section + section {
 .btn {
   display: inline-block;
   background: var(--orange);
-  color: var(--white);
+  color: var(--white) !important;
   padding: 0.85rem 2.25rem;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 700;
   border-radius: 6px;
   text-decoration: none;
   transition: background 0.2s;
@@ -112,6 +112,7 @@ section + section {
 
 .btn:hover {
   background: var(--orange-dark);
+  color: var(--white) !important;
   text-decoration: none;
 }
 
@@ -297,7 +298,11 @@ section + section {
 }
 
 .footer-initiative {
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.25rem;
+}
+
+.footer-supported {
+  margin-bottom: 0.5rem;
 }
 
 .site-footer a {

@@ -5,8 +5,8 @@ title: Home
 
 <section class="hero">
 <div class="hero-inner">
-<h1>Changing the textile industry.<br><span class="highlight">Digitally. Together.</span></h1>
-<p>An experience that connects digitalisation, circularity, and real production — giving the textile ecosystem the tools, knowledge, and infrastructure to act.</p>
+<h1>Changing the Dutch textile industry.<br><span class="highlight">Digitally. Together.</span></h1>
+<p>A fieldlab connecting digitalisation, circularity, and real production — giving the Dutch textile ecosystem the tools, knowledge, and infrastructure to act.</p>
 <a href="#join" class="btn">Join the Movement</a>
 </div>
 </section>
@@ -14,15 +14,15 @@ title: Home
 <section class="manifesto">
 <div class="container">
 <h2>The opportunity space</h2>
-<p>The textile industry faces a turning point. EU regulations demand lifecycle responsibility. But current digital tools are fragmented, production is disconnected, and circular promises lack infrastructure.</p>
-<p>TOS13 is where that changes. A physical-digital fieldlab at <strong>Textile Campus Tilburg</strong> where companies, researchers, and creatives connect machines, materials, and data — and validate the systems that make circularity operational, enforceable, and scalable.</p>
+<p>The Dutch textile industry stands at a turning point. European regulations demand lifecycle responsibility. But current digital tools are fragmented, production is disconnected, and circular promises lack infrastructure.</p>
+<p>TOS13 is where that changes. A physical-digital fieldlab at <strong>Textile Campus Tilburg</strong> in the heart of the Netherlands, where companies, researchers, and creatives connect machines, materials, and data — and validate the systems that make circularity operational, enforceable, and scalable.</p>
 </div>
 </section>
 
 <section class="quadrant">
 <div class="container">
 <h2>Impact quadrant</h2>
-<p class="quadrant-intro">We are committed to lead the digital responsibility movement and change the textile industry for the better.</p>
+<p class="quadrant-intro">We are committed to lead the digital responsibility movement and change the Dutch textile industry for the better.</p>
 <div class="quadrant-grid">
 <div class="quadrant-item">
 <span class="quadrant-label">Materials</span>
@@ -86,7 +86,7 @@ title: Home
 </div>
 <div class="benefit">
 <strong>Connect across the value chain</strong>
-<p>Collaborate with researchers, manufacturers, creatives, and technology partners in one physical space.</p>
+<p>Collaborate with researchers, manufacturers, creatives, and technology partners in one physical space in the Netherlands.</p>
 </div>
 </div>
 </div>
@@ -95,7 +95,7 @@ title: Home
 <section class="partners" id="join">
 <div class="container">
 <h2>Consortium partners — Now recruiting</h2>
-<p class="partners-intro">Together we trigger a movement of conscious creation. The fieldlab is open to industrial partners, creative practices, and technology providers who want to shape the digital future of textiles.</p>
+<p class="partners-intro">Together we trigger a movement of conscious creation. The fieldlab is open to industrial partners, creative practices, and technology providers who want to shape the digital future of Dutch textiles.</p>
 <p class="partners-intro">Whether you bring materials, machines, data, or design — there is a seat at the table.</p>
 <!-- Partners to be announced
 - TU/e — Wearable Sensing Lab (Lead)

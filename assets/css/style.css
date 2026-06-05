@@ -6,22 +6,22 @@
 }
 
 :root {
-  --orange: #E87A1E;
-  --orange-dark: #C96A15;
-  --orange-light: #FFF3E6;
+  --yellow: #F5F069;
+  --yellow-dark: #DDD84A;
+  --yellow-light: #FEFDDD;
   --black: #0A0A0A;
   --dark: #141414;
   --dark-mid: #1E1E1E;
-  --gray: #999;
-  --gray-light: #CCC;
+  --gray: #555;
+  --gray-light: #444;
   --white: #FFFFFF;
 }
 
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-  color: var(--white);
+  color: var(--black);
   line-height: 1.7;
-  background: var(--black);
+  background: var(--yellow);
   overflow-x: hidden;
 }
 
@@ -33,8 +33,8 @@ body {
 
 /* === Header === */
 .site-header {
-  background: var(--black);
-  border-bottom: 1px solid #222;
+  background: var(--yellow);
+  border-bottom: 1px solid rgba(0,0,0,0.15);
   padding: 1.25rem 0;
   position: sticky;
   top: 0;
@@ -60,12 +60,12 @@ body {
   font-size: 1.5rem;
   font-weight: 700;
   letter-spacing: 0.05em;
-  color: var(--white);
+  color: #666;
   text-transform: uppercase;
 }
 
 .site-title .highlight {
-  color: var(--orange);
+  color: var(--black);
 }
 
 .site-tagline {
@@ -75,12 +75,29 @@ body {
   letter-spacing: 0.02em;
 }
 
+/* === Banner === */
+.banner {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  margin-left: -50vw;
+  line-height: 0;
+}
+
+.banner-img {
+  display: block;
+  width: 100%;
+  height: clamp(200px, 30vw, 380px);
+  object-fit: cover;
+  object-position: center;
+}
+
 /* === Hero === */
 .hero {
-  background: var(--dark);
+  background: var(--yellow);
   padding: 6rem 2rem 5rem;
   text-align: center;
-  border-bottom: 1px solid #222;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
 }
 
 .hero-inner {
@@ -92,18 +109,19 @@ body {
   font-size: 3rem;
   font-weight: 700;
   line-height: 1.15;
-  color: var(--white);
+  color: var(--black);
   letter-spacing: -0.02em;
   margin-bottom: 1.5rem;
 }
 
 .hero h1 .highlight {
-  color: var(--orange);
+  color: var(--black);
+  font-style: italic;
 }
 
 .hero p {
   font-size: 1.15rem;
-  color: var(--gray-light);
+  color: var(--gray);
   max-width: 600px;
   margin: 0 auto 2.5rem;
   line-height: 1.7;
@@ -112,22 +130,22 @@ body {
 /* === Buttons === */
 .btn {
   display: inline-block;
-  background: var(--orange);
-  color: var(--white) !important;
+  background: var(--black);
+  color: var(--yellow) !important;
   padding: 1rem 2.5rem;
   font-size: 0.9rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  border-radius: 0;
+  border-radius: 8px;
   text-decoration: none;
   transition: background 0.2s;
 }
 
 .btn:hover {
-  background: var(--orange-dark);
+  background: #333;
   text-decoration: none;
-  color: var(--white) !important;
+  color: var(--yellow) !important;
 }
 
 .btn-light {
@@ -136,15 +154,15 @@ body {
 }
 
 .btn-light:hover {
-  background: var(--orange);
-  color: var(--white) !important;
+  background: var(--yellow);
+  color: var(--black) !important;
 }
 
 /* === Manifesto === */
 .manifesto {
-  background: var(--black);
+  background: var(--white);
   padding: 5rem 0;
-  border-bottom: 1px solid #222;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
 }
 
 .manifesto h2 {
@@ -152,7 +170,7 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.04em;
-  color: var(--orange);
+  color: var(--black);
   margin-bottom: 1.5rem;
 }
 
@@ -164,14 +182,14 @@ body {
 }
 
 .manifesto strong {
-  color: var(--white);
+  color: var(--black);
 }
 
 /* === Impact Quadrant === */
 .quadrant {
-  background: var(--dark);
+  background: var(--yellow);
   padding: 5rem 0;
-  border-bottom: 1px solid #222;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
 }
 
 .quadrant h2 {
@@ -179,7 +197,7 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.04em;
-  color: var(--white);
+  color: var(--black);
   margin-bottom: 0.75rem;
 }
 
@@ -193,12 +211,14 @@ body {
 .quadrant-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 0;
+  gap: 1.5rem;
 }
 
 .quadrant-item {
   padding: 2rem;
-  border: 1px solid #333;
+  border: 1px solid rgba(0,0,0,0.15);
+  border-radius: 10px;
+  background: var(--white);
 }
 
 .quadrant-label {
@@ -207,21 +227,21 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.15em;
-  color: var(--orange);
+  color: var(--black);
   margin-bottom: 0.75rem;
 }
 
 .quadrant-item p {
-  color: var(--gray-light);
+  color: var(--gray);
   font-size: 0.95rem;
   margin: 0;
 }
 
 /* === Phases === */
 .phases {
-  background: var(--black);
+  background: var(--white);
   padding: 5rem 0;
-  border-bottom: 1px solid #222;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
 }
 
 .phases h2 {
@@ -229,7 +249,7 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.04em;
-  color: var(--white);
+  color: var(--black);
   margin-bottom: 0.75rem;
 }
 
@@ -243,13 +263,15 @@ body {
 .phase-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 0;
+  gap: 1.5rem;
 }
 
 .phase-card {
   padding: 2.25rem 2rem;
-  border: 1px solid #333;
+  border: 1px solid rgba(0,0,0,0.12);
+  border-radius: 10px;
   position: relative;
+  overflow: hidden;
 }
 
 .phase-card::before {
@@ -259,14 +281,14 @@ body {
   left: 0;
   right: 0;
   height: 3px;
-  background: var(--orange);
+  background: var(--black);
 }
 
 .phase-number {
   display: block;
   font-size: 0.75rem;
   font-weight: 700;
-  color: var(--orange);
+  color: var(--black);
   letter-spacing: 0.1em;
   margin-bottom: 1rem;
   font-variant-numeric: tabular-nums;
@@ -275,7 +297,7 @@ body {
 .phase-card h3 {
   font-size: 1.05rem;
   font-weight: 700;
-  color: var(--white);
+  color: var(--black);
   margin-bottom: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.02em;
@@ -290,9 +312,9 @@ body {
 
 /* === Why Join === */
 .why-join {
-  background: var(--dark);
+  background: var(--yellow);
   padding: 5rem 0;
-  border-bottom: 1px solid #222;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
 }
 
 .why-join h2 {
@@ -300,7 +322,7 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.04em;
-  color: var(--white);
+  color: var(--black);
   margin-bottom: 2.5rem;
 }
 
@@ -312,8 +334,9 @@ body {
 
 .benefit {
   padding: 1.75rem 2rem;
-  border-left: 3px solid var(--orange);
-  background: var(--dark-mid);
+  border-left: 3px solid var(--black);
+  background: var(--white);
+  border-radius: 10px;
 }
 
 .benefit strong {
@@ -321,19 +344,19 @@ body {
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  color: var(--orange);
+  color: var(--black);
   margin-bottom: 0.6rem;
 }
 
 .benefit p {
-  color: var(--gray-light);
+  color: var(--gray);
   font-size: 0.925rem;
   margin: 0;
 }
 
 /* === Partners / CTA === */
 .partners {
-  background: var(--orange);
+  background: var(--black);
   padding: 5rem 0;
   text-align: center;
 }
@@ -343,16 +366,15 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.04em;
-  color: var(--black);
+  color: var(--white);
   margin-bottom: 1.5rem;
 }
 
 .partners-intro {
-  color: var(--black);
+  color: rgba(255,255,255,0.75);
   font-size: 1.1rem;
   max-width: 600px;
   margin: 0 auto 0.75rem;
-  opacity: 0.85;
 }
 
 .partners .btn-light {
@@ -366,13 +388,13 @@ body {
 }
 
 .site-content a {
-  color: var(--orange);
-  text-decoration: none;
+  color: var(--black);
+  text-decoration: underline;
   font-weight: 600;
 }
 
 .site-content a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 /* === Footer === */
@@ -381,7 +403,7 @@ body {
   border-top: 1px solid #222;
   padding: 2rem 0;
   text-align: center;
-  color: var(--gray);
+  color: #999;
   font-size: 0.8rem;
 }
 
@@ -394,7 +416,7 @@ body {
 }
 
 .site-footer a {
-  color: var(--orange);
+  color: var(--yellow);
   text-decoration: none;
   font-weight: 600;
 }

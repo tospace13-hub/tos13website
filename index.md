@@ -3,6 +3,10 @@ layout: default
 title: Home
 ---
 
+<section class="banner">
+<img src="{{ '/assets/images/banner.png' | relative_url }}" alt="TOS13 — Textile Opportunity Space 13" class="banner-img">
+</section>
+
 <section class="hero">
 <div class="hero-inner">
 <h1>Changing the Dutch textile industry.<br><span class="highlight">Digitally. Together.</span></h1>
@@ -94,10 +98,10 @@ title: Home
 
 <section class="partners" id="join">
 <div class="container">
-<h2>Consortium partners — Now recruiting</h2>
-<p class="partners-intro">Together we trigger a movement of conscious creation. The fieldlab is open to industrial partners, creative practices, and technology providers who want to shape the digital future of Dutch textiles.</p>
-<p class="partners-intro">Whether you bring materials, machines, data, or design — there is a seat at the table.</p>
-<!-- Partners to be announced
+<h2>Join the fieldlab</h2>
+<p class="partners-intro">Our founding consortium is in place — now the fieldlab opens its doors. Together we trigger a movement of conscious creation, and there's room for more makers, manufacturers, researchers, and creatives to take part.</p>
+<p class="partners-intro">Whether you want to test a circular workflow, validate a digital tool, run a pilot, or simply learn alongside the community — come build the digital future of Dutch textiles with us.</p>
+<!-- Founding consortium
 - TU/e — Wearable Sensing Lab (Lead)
 - Vlisco
 - Bata Industrials
@@ -111,6 +115,6 @@ title: Home
 - Fashion Tech Farm
 - Strijp-S / Strijp-J
 -->
-<a href="mailto:join@space13.to?subject=TOS13%20Consortium%20—%20Interest%20to%20Join" class="btn btn-light">Join the Consortium</a>
+<a href="mailto:join@space13.to?subject=TOS13%20Fieldlab%20—%20Interest%20to%20Join" class="btn btn-light">Join the Fieldlab</a>
 </div>
 </section>

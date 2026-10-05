@@ -177,6 +177,7 @@ body {
 
 .section--white {
   background: var(--white);
+  border-radius: 20px;
 }
 
 .section--yellow {
@@ -205,8 +206,7 @@ body {
   color: var(--black);
 }
 
-.label,
-.kicker {
+.label {
   display: block;
   font-size: 0.75rem;
   font-weight: 700;
@@ -214,18 +214,6 @@ body {
   letter-spacing: 0.12em;
   color: var(--black);
   margin-bottom: 0.6rem;
-}
-
-.hero .kicker {
-  display: inline-block;
-  max-width: none;
-  padding: 0.35rem 0.9rem;
-  border: 1px solid var(--black);
-  border-radius: 1rem;
-  margin: 0 0 1.75rem;
-  font-size: 0.75rem;
-  line-height: 1.5;
-  color: var(--black);
 }
 
 .prose {
@@ -302,6 +290,7 @@ body {
   top: 0.7em;
   width: 0.6rem;
   height: 0.6rem;
+  border-radius: 50%;
   background: var(--black);
 }
 
@@ -617,6 +606,8 @@ body {
 /* === Partners / CTA === */
 .partners {
   background: var(--black);
+  border-radius: 20px;
+  margin-top: 2rem;
   padding: 5rem 0;
   text-align: center;
 }
@@ -702,30 +693,81 @@ body {
 
 /* === Footer === */
 .site-footer {
-  background: var(--black);
-  border-top: 1px solid #222;
-  padding: 2rem 0;
+  background: var(--yellow);
+  padding: 4rem 0 2rem;
   text-align: center;
-  color: #999;
-  font-size: 0.8rem;
+  color: var(--gray);
+  font-size: 0.85rem;
 }
 
-.footer-initiative {
-  margin-bottom: 0.25rem;
+.footer-block {
+  margin-bottom: 3rem;
 }
 
-.footer-supported {
-  margin-bottom: 0.5rem;
+.site-footer .label {
+  margin-bottom: 1.25rem;
 }
 
-.site-footer a {
-  color: var(--yellow);
-  text-decoration: none;
+.footer-note {
+  max-width: 480px;
+  margin: 1rem auto 0;
+}
+
+/* 18 partners: 6 columns on desktop, 3 on tablets, 2 on phones, so every row is full. */
+.logo-wall {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  align-items: center;
+  justify-items: center;
+  gap: 2.25rem 1rem;
+}
+
+.footer-logo {
+  display: inline-block;
+  border-radius: 8px;
+  transition: opacity 0.2s ease;
+}
+
+.footer-logo:hover {
+  opacity: 0.7;
+}
+
+.footer-logo:focus-visible {
+  outline: 2px solid var(--black);
+  outline-offset: 6px;
+}
+
+/* Width/height attributes set each logo's display size; keep the ratio if it has to shrink. */
+.footer-logo img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.footer-thanks {
+  max-width: 640px;
+  margin: 0 auto 2rem;
+  padding: 1.25rem 1.5rem;
+  background: var(--yellow-light);
+  border: 1px solid rgba(0,0,0,0.12);
+  border-radius: 10px;
+  color: var(--black);
+  font-size: 0.95rem;
+}
+
+.footer-meta {
+  margin: 0;
+}
+
+.site-footer a:not(.footer-logo) {
+  color: var(--black);
   font-weight: 600;
+  text-decoration: underline;
 }
 
-.site-footer a:hover {
-  text-decoration: underline;
+.site-footer a:not(.footer-logo):hover {
+  text-decoration: none;
 }
 
 /* === Responsive === */
@@ -746,6 +788,10 @@ body {
   .consortium-groups,
   .steps {
     grid-template-columns: 1fr;
+  }
+
+  .logo-wall {
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .wp-card {
@@ -831,5 +877,10 @@ body {
 
   .consortium-group--wide li:last-child {
     border-bottom: 0;
+  }
+
+  .logo-wall {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.75rem 1rem;
   }
 }

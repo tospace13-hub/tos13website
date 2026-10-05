@@ -31,7 +31,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <!-- Versioned per build so browsers never pair a new page with a cached old stylesheet -->
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}?v={{ site.time | date: '%s' }}">
 </head>
 <body>
 
@@ -55,17 +56,41 @@
 
   <footer class="site-footer">
     <div class="container">
-      <p class="footer-initiative">Led by
-        <a href="https://www.tue.nl/en/our-university/departments/industrial-design/" target="_blank" rel="noopener">TU/e</a>
-        with HvA, ArtEZ, Saxion &amp;
-        <a href="https://textiellab.nl/en" target="_blank" rel="noopener">TextielLab Tilburg</a>
-        &middot; Part of <a href="https://newtexeco.nl/en/home/" target="_blank" rel="noopener">NewTexEco</a>
-      </p>
-      <p class="footer-supported">Supported by <a href="https://www.clicknl.nl/en/" target="_blank" rel="noopener">CLICKNL</a>
-        &middot; <a href="mailto:hello@space13.to">hello@space13.to</a>
+      {% assign funder = site.data.partners.funder %}
+      <div class="footer-block">
+        <h2 class="label">Co-funded by</h2>
+        <a href="{{ funder.url }}" class="footer-logo" target="_blank" rel="noopener">
+          <img src="{{ funder.logo | relative_url }}" alt="{{ funder.name }}" width="{{ funder.width }}" height="{{ funder.height }}" loading="lazy">
+        </a>
+        <p class="footer-note">TOS13 is co-funded by CLICKNL through the PPS-toeslag for public-private research.</p>
+      </div>
+
+      <div class="footer-block">
+        <h2 class="label">The consortium, led by TU/e</h2>
+        <ul class="logo-wall">
+          {% for partner in site.data.partners.partners %}
+          <li>
+            <a href="{{ partner.url }}" class="footer-logo" target="_blank" rel="noopener">
+              <img src="{{ partner.logo | relative_url }}" alt="{{ partner.name }}" width="{{ partner.width }}" height="{{ partner.height }}" loading="lazy">
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div class="footer-thanks">
+        <p>With thanks to
+          <a href="https://www.byborre.com/" target="_blank" rel="noopener">BYBORRE</a> and
+          <a href="https://newtexeco.nl/en/home/" target="_blank" rel="noopener">NewTexEco</a>.
+          TOS13 grew out of BYBORRE's Window of Textile Opportunities (WoTO) and the NewTexEco network.
+        </p>
+      </div>
+
+      <p class="footer-meta">
+        <a href="mailto:hello@space13.to">hello@space13.to</a>
         &middot; <a href="https://www.linkedin.com/company/space13" target="_blank" rel="noopener">LinkedIn</a>
+        &middot; &copy; {{ 'now' | date: "%Y" }} Textile Opportunity Space 13
       </p>
-      <p>&copy; {{ 'now' | date: "%Y" }} Textile Opportunity Space 13</p>
     </div>
   </footer>
 

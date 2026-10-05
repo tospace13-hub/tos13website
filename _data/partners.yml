@@ -1,0 +1,100 @@
+# Consortium partners shown in the site footer, in the order of the consortium list.
+# width/height are display sizes in px (equal visual area per logo); the PNGs are 2x.
+partners:
+  - name: "Eindhoven University of Technology (TU/e)"
+    url: https://www.tue.nl/en/
+    logo: /assets/images/partners/tue.png
+    width: 102
+    height: 41
+  - name: "Hogeschool van Amsterdam (HvA)"
+    url: https://www.hva.nl/
+    logo: /assets/images/partners/hva.png
+    width: 141
+    height: 30
+  - name: "Saxion University of Applied Sciences"
+    url: https://www.saxion.nl/
+    logo: /assets/images/partners/saxion.png
+    width: 104
+    height: 40
+  - name: "ArtEZ University of the Arts"
+    url: https://www.artez.nl/
+    logo: /assets/images/partners/artez.png
+    width: 75
+    height: 56
+  - name: "TextielMuseum and TextielLab Tilburg"
+    url: https://textielmuseum.nl/
+    logo: /assets/images/partners/textielmuseum.png
+    width: 160
+    height: 21
+  - name: "TextielCampus Tilburg (Gemeente Tilburg)"
+    url: https://www.textielcampustilburg.nl/
+    logo: /assets/images/partners/textielcampus-tilburg.png
+    width: 60
+    height: 60
+  - name: "Vlisco"
+    url: https://www.vlisco.com/
+    logo: /assets/images/partners/vlisco.png
+    width: 160
+    height: 25
+  - name: "EnhanceThat"
+    url: https://enhancethat.fashion/
+    logo: /assets/images/partners/enhancethat.png
+    width: 83
+    height: 51
+  - name: "Vodde"
+    url: https://vodde.nl/
+    logo: /assets/images/partners/vodde.png
+    width: 121
+    height: 35
+  - name: "Fashion Tech Farm"
+    url: https://fashiontechfarm.com/
+    logo: /assets/images/partners/fashion-tech-farm.png
+    width: 108
+    height: 39
+  - name: "Modint"
+    url: https://www.modint.nl/
+    logo: /assets/images/partners/modint.png
+    width: 160
+    height: 23
+  - name: "Hollanders Printing Solutions"
+    url: https://hollanders-ps.nl/
+    logo: /assets/images/partners/hollanders.png
+    width: 160
+    height: 17
+  - name: "NewTexEco"
+    url: https://newtexeco.nl/en/home/
+    logo: /assets/images/partners/newtexeco.png
+    width: 71
+    height: 59
+  - name: "ValueSort.ai"
+    url: https://valuesort.ai/
+    logo: /assets/images/partners/valuesort.png
+    width: 160
+    height: 21
+  - name: "Stichting TexPlus"
+    url: https://texplus.nl/
+    logo: /assets/images/partners/texplus.png
+    width: 153
+    height: 27
+  - name: "United Repair Centre"
+    url: https://unitedrepaircentre.com/
+    logo: /assets/images/partners/united-repair-centre.png
+    width: 59
+    height: 60
+  - name: "VNYX"
+    url: https://vnyx.ai/
+    logo: /assets/images/partners/vnyx.png
+    width: 157
+    height: 27
+  - name: "NXP Semiconductors"
+    url: https://www.nxp.com/
+    logo: /assets/images/partners/nxp.png
+    width: 111
+    height: 38
+
+funder:
+  name: "CLICKNL"
+  url: https://www.clicknl.nl/en/
+  logo: /assets/images/partners/clicknl.png
+  width: 180
+  height: 46

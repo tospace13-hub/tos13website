@@ -11,7 +11,6 @@ layout: default
 
 <section class="hero">
 <div class="hero-inner">
-<p class="kicker">Fieldlab kicked off 30 September 2026 · Based at Textile Campus Tilburg</p>
 <h1>Changing the Dutch textile industry.<br><span class="highlight">Digitally. Together.</span></h1>
 <p>A fieldlab where textile SMEs, researchers and technology partners build a shared digital orchestration layer for the Dutch textile sector — from design and production to repair, reuse and end-of-life.</p>
 <a href="#join" class="btn">Take part</a>

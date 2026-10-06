@@ -756,6 +756,19 @@ body {
   font-size: 0.95rem;
 }
 
+.thanks-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.footer-thanks p {
+  margin: 0;
+}
+
 .footer-meta {
   margin: 0;
 }

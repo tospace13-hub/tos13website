@@ -112,10 +112,8 @@ layout: default
 <p class="wp-lead">Helping textile companies find each other and share DPP-ready data.</p>
 <p>An orchestration platform that connects Dutch circular textile partners through the TELL data infrastructure. It maps partners to the steps of the Digital Product Passport and matches SME questions to the right knowledge and capacity.</p>
 <dl class="wp-meta">
-<dt>Leads</dt>
-<dd>TU/e + Fashion Tech Farm</dd>
-<dt>With</dt>
-<dd>EnhanceThat, HvA, NewTexEco Partners, TextielLab Tilburg</dd>
+<dt>Partners</dt>
+<dd>TU/e, Fashion Tech Farm, EnhanceThat, HvA, NewTexEco Partners, TextielLab Tilburg</dd>
 </dl>
 </div>
 <div class="wp-side">
@@ -139,10 +137,8 @@ layout: default
 <p class="wp-lead">Turning the tacit knowledge of machines and operators into reusable data.</p>
 <p>Data-enabled hybrid digital-physical manufacturing that plugs into digital supply chains and digital twins, making machines and production know-how digitally accessible for small-batch making.</p>
 <dl class="wp-meta">
-<dt>Leads</dt>
-<dd>TU/e + Hollanders Printing Solutions</dd>
-<dt>With</dt>
-<dd>Vlisco, Vodde, TextielLab Tilburg, Saxion</dd>
+<dt>Partners</dt>
+<dd>TU/e, Hollanders Printing Solutions, Vlisco, Vodde, TextielLab Tilburg, Saxion</dd>
 </dl>
 </div>
 <div class="wp-side">
@@ -166,10 +162,8 @@ layout: default
 <p class="wp-lead">Routing every used garment to its highest-value next life.</p>
 <p>A traffic-control system for value retention: AI-supported assessment decides between repair, reuse, resale, upcycling and recycling.</p>
 <dl class="wp-meta">
-<dt>Leads</dt>
-<dd>TU/e + ValueSort.ai</dd>
-<dt>With</dt>
-<dd>United Repair Centre, Stichting TexPlus, NXP Semiconductors, Saxion, ArtEZ, VNYX</dd>
+<dt>Partners</dt>
+<dd>TU/e, ValueSort.ai, United Repair Centre, Stichting TexPlus, NXP Semiconductors, Saxion, ArtEZ, VNYX</dd>
 </dl>
 </div>
 <div class="wp-side">

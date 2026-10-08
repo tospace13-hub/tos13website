@@ -891,6 +891,10 @@ body {
   margin-bottom: 0.5rem;
 }
 
+.form-thanks p + p {
+  margin-top: 0.75rem;
+}
+
 /* Spam trap: kept out of sight and out of the tab order; people never fill it in. */
 .trap {
   position: absolute;

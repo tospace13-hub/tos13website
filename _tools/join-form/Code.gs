@@ -1,7 +1,7 @@
 /**
  * TOS13 join form backend (Google Apps Script web app).
  *
- * Receives submissions from space13.to/join/, adds one row per submission to
+ * Receives submissions from https://space13.to/join/, adds one row per submission to
  * the "TOS13 join form responses" sheet and emails NOTIFY_EMAIL.
  * Setup steps are in README.md next to this file.
  */

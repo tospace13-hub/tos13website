@@ -72,6 +72,24 @@ body {
   color: var(--black);
 }
 
+/* Main navigation: one item for now, laid out as a list so more can follow. */
+.site-nav {
+  margin-left: auto;
+}
+
+.site-nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.btn-small {
+  padding: 0.6rem 1.25rem;
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
 .site-tagline {
   font-size: 0.8rem;
   color: var(--gray);
@@ -856,20 +874,20 @@ body {
   cursor: wait;
 }
 
-.join-status {
+.form-status {
   margin-top: 1rem;
   min-height: 1.5em;
   font-weight: 600;
 }
 
-.join-thanks {
+.form-thanks {
   max-width: 760px;
   padding: 2rem;
   background: var(--yellow-light);
   border-radius: 10px;
 }
 
-.join-thanks h2 {
+.form-thanks h2 {
   margin-bottom: 0.5rem;
 }
 
@@ -1019,6 +1037,10 @@ body {
   .site-header .container {
     flex-direction: column;
     text-align: center;
+  }
+
+  .site-nav {
+    margin-left: 0;
   }
 
   .site-title {

@@ -28,7 +28,7 @@ permalink: /ai/
 <ul>
 <li><strong>Risk.</strong> These systems assess textiles and match organisations; they do not assess or make decisions about people. In our assessment they fall outside the AI Act's prohibited practices and high-risk categories. We review that assessment as the systems develop, and before any of them is used outside the fieldlab.</li>
 <li><strong>Research.</strong> Most of this work is research and development, which the AI Act largely exempts until a system is placed on the market or put into service. We follow the Act's principles of transparency and human oversight from the start.</li>
-<li><strong>Human oversight.</strong> In the fieldlab, AI outputs are recommendations. A person checks them and makes the final decision.</li>
+<li><strong>Human oversight.</strong> For now, a person checks every AI output in the fieldlab and makes the final decision. If that changes as the systems mature, we will reassess them under the AI Act and update this statement.</li>
 <li><strong>Transparency.</strong> When a system built in the fieldlab interacts with people or generates content, we say so.</li>
 <li><strong>Data.</strong> Training data, such as the garment image dataset, is collected for its purpose with the consent of the partners involved, and personal data is kept out of it.</li>
 <li><strong>AI literacy.</strong> Partners who build or use AI systems in the fieldlab get guidance on what those systems can and cannot do.</li>

@@ -804,10 +804,6 @@ body {
   gap: 0 1.25rem;
 }
 
-.field-row--3 {
-  grid-template-columns: 1fr 1fr 1fr;
-}
-
 .choices {
   display: grid;
   gap: 0.5rem;
@@ -1088,7 +1084,6 @@ body {
   }
 
   .field-row,
-  .field-row--3,
   .choices--2 {
     grid-template-columns: 1fr;
   }

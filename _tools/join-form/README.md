@@ -27,8 +27,8 @@ gets a new URL, which would then also need changing in `_config.yml`.
 Organisation columns use the field names of TELL
 ([tell.newtexeco.nl](https://tell.newtexeco.nl)), NewTexEco's map of Dutch
 textile companies, so each response can be matched against it: by website
-first, then KvK number, then name and city. `tell_match` and `team_notes`
-are for the team; the form never fills them.
+first, then name and city. `kvk`, `tell_match` and `team_notes` are for the
+team (the KvK number is looked up, not asked); the form never fills them.
 
 Only organisations that ticked `consent_tell` may be passed on to NewTexEco
 for TELL, and only their organisation columns, never name, email or role.

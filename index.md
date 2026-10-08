@@ -347,7 +347,7 @@ layout: default
 </li>
 <li>
 <h3>Spread the word</h3>
-<p>Follow and share space13.to and <a href="https://www.linkedin.com/company/space13" target="_blank" rel="noopener">TOS13 on LinkedIn</a>.</p>
+<p>Follow and share <a href="https://space13.to">https://space13.to</a> and <a href="https://www.linkedin.com/company/space13" target="_blank" rel="noopener">TOS13 on LinkedIn</a>.</p>
 </li>
 </ol>
 <a href="{{ '/join/' | relative_url }}" class="btn btn-light">Join TOS13</a>

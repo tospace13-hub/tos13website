@@ -735,6 +735,18 @@ body {
   margin-top: 2rem;
 }
 
+.pdf-actions {
+  margin-bottom: 2rem;
+}
+
+.pdf-frame {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 10px;
+}
+
 .join-notice {
   padding: 1rem 1.25rem;
   background: var(--yellow-light);
@@ -1107,6 +1119,11 @@ body {
 
   .consortium-group--wide li:last-child {
     border-bottom: 0;
+  }
+
+  /* Phone browsers show only the first page, or nothing: the button opens the full PDF */
+  .pdf-frame {
+    display: none;
   }
 
   .field-row,

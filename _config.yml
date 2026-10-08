@@ -8,4 +8,4 @@ markdown: kramdown
 
 # Join form (/join/): URL of the Google Apps Script web app that stores
 # responses. Setup steps: _tools/join-form/README.md
-join_form_endpoint: ""
+join_form_endpoint: "https://script.google.com/macros/s/AKfycbxQWnutAX0CyQR58YTotzZSTW0UAMVdOcq8O2ByBHkDvDOawYnSszBbBKQU6ibzoE8L/exec"

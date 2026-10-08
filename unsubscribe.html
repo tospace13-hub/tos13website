@@ -8,7 +8,7 @@ permalink: /unsubscribe/
 <section class="section section--white join">
 <div class="container">
 <h1>Unsubscribe</h1>
-<p class="section-intro">Enter your email address and we will stop sending you the TOS13 newsletter.</p>
+<p class="section-intro">Enter your email address and we will stop sending you the TOS13 newsletter. This does not remove your details from the project: if you would like your personal data removed, email <a href="mailto:privacy@space13.to">privacy@space13.to</a>.</p>
 
 {%- assign endpoint = site.join_form_endpoint | default: "" -%}
 {% if endpoint == "" %}
@@ -32,6 +32,7 @@ permalink: /unsubscribe/
 <div id="unsubscribe-thanks" class="form-thanks" hidden tabindex="-1">
 <h2>You are unsubscribed</h2>
 <p>We will not send the newsletter to this address any more. Changed your mind? Email <a href="mailto:hello@space13.to">hello@space13.to</a>.</p>
+<p>To have your personal data removed from the project, email <a href="mailto:privacy@space13.to">privacy@space13.to</a>.</p>
 </div>
 </div>
 </section>

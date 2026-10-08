@@ -327,7 +327,7 @@ layout: default
 <ol class="steps">
 <li>
 <h3>Join us</h3>
-<p>Tell us your questions at <a href="mailto:hello@space13.to">hello@space13.to</a>.</p>
+<p>Fill in the <a href="{{ '/join/' | relative_url }}">join form</a>, or email your questions to <a href="mailto:hello@space13.to">hello@space13.to</a>.</p>
 </li>
 <li>
 <h3>Become an associate partner</h3>
@@ -350,6 +350,6 @@ layout: default
 <p>Follow and share space13.to and <a href="https://www.linkedin.com/company/space13" target="_blank" rel="noopener">TOS13 on LinkedIn</a>.</p>
 </li>
 </ol>
-<a href="mailto:hello@space13.to?subject=TOS13%20Fieldlab" class="btn btn-light">Email hello@space13.to</a>
+<a href="{{ '/join/' | relative_url }}" class="btn btn-light">Join TOS13</a>
 </div>
 </section>

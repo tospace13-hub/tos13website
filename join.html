@@ -1,0 +1,148 @@
+---
+layout: default
+title: Join TOS13 · Textile Opportunity Space 13
+description: "Join the TOS13 fieldlab: tell us about your organisation and how you want to take part."
+permalink: /join/
+---
+{%- comment -%}
+  The value-chain options are TELL's own (tell.newtexeco.nl contribution form),
+  word for word, so answers can be compared with TELL directly.
+{%- endcomment -%}
+{%- assign tiers = "Fiber producer|Yarn & Textile producer (semi-finished products)|Garment production (finished product)|Wholesale|Retail|Brand|Collection & sorting of used textiles|Repair & Re-manufacturing|Recycling|Research & network organization|Other" | split: "|" -%}
+{%- assign interests = "Becoming an associate partner|Bringing a case from my organisation|Visiting the fieldlab|Something else" | split: "|" -%}
+
+<section class="section section--white join">
+<div class="container">
+<h1>Join TOS13</h1>
+<p class="section-intro">Tell us about your organisation and how you would like to take part. The questions about your organisation follow <a href="https://tell.newtexeco.nl" target="_blank" rel="noopener">TELL</a>, NewTexEco's map of the Dutch textile sector, so we can see where you fit in.</p>
+
+{%- assign endpoint = site.join_form_endpoint | default: "" -%}
+{% if endpoint == "" %}
+<p class="join-notice">The form is not connected yet. Until it is, email us at <a href="mailto:hello@space13.to">hello@space13.to</a>.</p>
+{% endif %}
+
+<form id="join-form" class="join-form" action="{{ site.join_form_endpoint }}" method="post">
+
+<fieldset>
+<legend>About you</legend>
+<div class="field-row">
+<label class="field">Name <span class="req">*</span>
+<input type="text" name="name" autocomplete="name" required></label>
+<label class="field">Email <span class="req">*</span>
+<input type="email" name="email" autocomplete="email" required></label>
+</div>
+<label class="field">Role
+<input type="text" name="role" autocomplete="organization-title" placeholder="e.g. production manager"></label>
+</fieldset>
+
+<fieldset>
+<legend>Your organisation</legend>
+<div class="field-row">
+<label class="field">Organisation name <span class="req">*</span>
+<input type="text" name="trade_name" autocomplete="organization" required></label>
+<label class="field">Website <span class="req">*</span>
+<input type="text" name="website" inputmode="url" autocomplete="url" placeholder="e.g. example.nl" required></label>
+</div>
+<div class="field-row">
+<label class="field">City <span class="req">*</span>
+<input type="text" name="city" autocomplete="address-level2" required></label>
+<label class="field">Postcode
+<input type="text" name="postcode" autocomplete="postal-code" placeholder="e.g. 5046 JZ"></label>
+</div>
+<div class="field-row field-row--3">
+<label class="field">KvK number
+<input type="text" name="kvk" inputmode="numeric" pattern="[0-9]{8}" title="8 digits" placeholder="8 digits"></label>
+<label class="field">Number of employees
+<input type="number" name="employees" min="0" step="1" inputmode="numeric"></label>
+<label class="field">Year founded
+<input type="number" name="year_start" min="1800" max="{{ 'now' | date: '%Y' }}" step="1" inputmode="numeric"></label>
+</div>
+
+<fieldset class="choice-group" id="tier-group">
+<legend>Where are you in the textile value chain? <span class="req">*</span> <span class="hint">Choose all that apply.</span></legend>
+<div class="choices choices--2">
+{%- for tier in tiers %}
+<label class="choice"><input type="checkbox" name="tier" value="{{ tier }}"> <span>{{ tier }}</span></label>
+{%- endfor %}
+</div>
+<label class="field field--compact">If other, please specify
+<input type="text" name="tier_other"></label>
+</fieldset>
+
+<fieldset class="choice-group">
+<legend>Product category</legend>
+<div class="choices">
+<label class="choice"><input type="radio" name="category" value="Fashion"> <span>Fashion and clothing</span></label>
+<label class="choice"><input type="radio" name="category" value="Home"> <span>Home textiles</span></label>
+<label class="choice"><input type="radio" name="category" value="Other"> <span>Other textiles (technical, industrial, …)</span></label>
+</div>
+</fieldset>
+
+<label class="field">What do you make or do? <span class="req">*</span> <span class="hint">Keywords work best.</span>
+<textarea name="tags" rows="2" placeholder="e.g. knitting, merino wool, workwear, digital printing" required></textarea></label>
+
+<fieldset class="choice-group">
+<legend>Do you sell or produce outside the Netherlands?</legend>
+<div class="choices choices--inline">
+<label class="choice"><input type="radio" name="outside_nl" value="Yes"> <span>Yes</span></label>
+<label class="choice"><input type="radio" name="outside_nl" value="No"> <span>No</span></label>
+</div>
+</fieldset>
+
+<fieldset class="choice-group">
+<legend>Is your organisation already on <a href="https://tell.newtexeco.nl" target="_blank" rel="noopener">TELL</a>?</legend>
+<div class="choices choices--inline">
+<label class="choice"><input type="radio" name="on_tell" value="Yes"> <span>Yes</span></label>
+<label class="choice"><input type="radio" name="on_tell" value="No"> <span>No</span></label>
+<label class="choice"><input type="radio" name="on_tell" value="Don't know"> <span>Don't know</span></label>
+</div>
+</fieldset>
+</fieldset>
+
+<fieldset>
+<legend>Taking part</legend>
+<fieldset class="choice-group">
+<legend>I'm interested in</legend>
+<div class="choices choices--2">
+{%- for interest in interests %}
+<label class="choice"><input type="checkbox" name="interests" value="{{ interest }}"> <span>{{ interest }}</span></label>
+{%- endfor %}
+</div>
+</fieldset>
+
+<fieldset class="choice-group">
+<legend>Do you already collect product or material data, for example for a Digital Product Passport?</legend>
+<div class="choices choices--inline">
+<label class="choice"><input type="radio" name="dpp_data" value="Not yet"> <span>Not yet</span></label>
+<label class="choice"><input type="radio" name="dpp_data" value="Partly"> <span>Partly</span></label>
+<label class="choice"><input type="radio" name="dpp_data" value="Yes"> <span>Yes</span></label>
+</div>
+</fieldset>
+
+<label class="field">Your question or case
+<textarea name="question" rows="4"></textarea></label>
+</fieldset>
+
+<fieldset class="choice-group consent" aria-label="Consent">
+<label class="choice"><input type="checkbox" name="consent_privacy" value="Yes" required> <span>I agree that TOS13 stores my answers to follow up on this request, as described in the <a href="{{ '/privacy/' | relative_url }}">privacy statement</a>. <span class="req">*</span></span></label>
+<label class="choice"><input type="checkbox" name="consent_newsletter" value="Yes"> <span>Send me the monthly TOS13 newsletter.</span></label>
+<label class="choice"><input type="checkbox" name="consent_tell" value="Yes"> <span>NewTexEco may use my organisation's details (not my personal details) to add or update it on TELL.</span></label>
+</fieldset>
+
+<div class="trap" aria-hidden="true">
+<label>Leave this empty <input type="text" name="fax" tabindex="-1" autocomplete="off"></label>
+</div>
+<input type="hidden" name="started_at" value="">
+
+<button type="submit" class="btn">Send</button>
+<p id="join-status" class="join-status" role="status" aria-live="polite"></p>
+</form>
+
+<div id="join-thanks" class="join-thanks" hidden tabindex="-1">
+<h2>Thank you</h2>
+<p>We have received your details and will get back to you at the email address you gave. Questions in the meantime? Email <a href="mailto:hello@space13.to">hello@space13.to</a>.</p>
+</div>
+</div>
+</section>
+
+<script src="{{ '/assets/js/join.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>

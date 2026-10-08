@@ -5,3 +5,7 @@ baseurl: ""
 
 # Build settings
 markdown: kramdown
+
+# Join form (/join/): URL of the Google Apps Script web app that stores
+# responses. Setup steps: _tools/join-form/README.md
+join_form_endpoint: ""

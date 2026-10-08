@@ -38,5 +38,5 @@ responses themselves stay), logs the request on the **Unsubscribe** tab and
 emails hello@space13.to. Newsletter emails can link to
 `https://space13.to/unsubscribe/?email=<address>` to fill in the address.
 
-Only organisations that ticked `consent_tell` may be passed on to NewTexEco
-for TELL, and only their organisation columns, never name, email or role.
+TELL is built from public company data. When working with NewTexEco on TELL,
+share only organisation columns, never name, email or role.

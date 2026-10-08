@@ -19,7 +19,7 @@ const COLUMNS = [
   'trade_name', 'website', 'city', 'postcode', 'kvk', 'employees', 'year_start',
   'tier', 'tier_other', 'category', 'tags', 'outside_nl', 'on_tell',
   'interests', 'dpp_data', 'question',
-  'consent_privacy', 'consent_newsletter', 'consent_tell',
+  'consent_privacy', 'consent_newsletter',
   'tell_match', 'team_notes',
 ];
 

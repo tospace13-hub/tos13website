@@ -21,7 +21,7 @@ permalink: /privacy/
 <ul>
 <li>To answer your request and involve you in the fieldlab.</li>
 <li>To send you the monthly newsletter, only if you tick that box. You can <a href="{{ '/unsubscribe/' | relative_url }}">unsubscribe</a> at any time; your answers stay on file.</li>
-<li>To add or update your organisation on <a href="https://tell.newtexeco.nl" target="_blank" rel="noopener">TELL</a>, NewTexEco's map of the Dutch textile sector, only if you tick that box. We then share your organisation's details with NewTexEco, never your name, email address or role.</li>
+<li>To compare your organisation with <a href="https://tell.newtexeco.nl" target="_blank" rel="noopener">TELL</a>, NewTexEco's map of the Dutch textile sector, which is built from public company data. We never share your name, email address or role with NewTexEco.</li>
 </ul>
 
 <h2>Where it is stored</h2>

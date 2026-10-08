@@ -12,7 +12,7 @@ permalink: /privacy/
 
 <div class="prose">
 <h2>Who we are</h2>
-<p>TOS13 is a fieldlab run by a consortium of 18 organisations, led by Eindhoven University of Technology (TU/e). For anything about your data, email <a href="mailto:hello@space13.to">hello@space13.to</a>.</p>
+<p>TOS13 is a fieldlab run by a consortium of 18 organisations, led by Eindhoven University of Technology (TU/e). For anything about your data, email <a href="mailto:privacy@space13.to">privacy@space13.to</a>.</p>
 
 <h2>What we collect</h2>
 <p>When you fill in the <a href="{{ '/join/' | relative_url }}">join form</a>: your name, email address and role; details about your organisation, such as its website, location, size, place in the textile value chain and what it makes or does; your interests and question; and the choices you tick at the end of the form.</p>
@@ -28,10 +28,10 @@ permalink: /privacy/
 <p>Your answers are stored in a Google spreadsheet in the TOS13 Google Drive, and a copy is emailed to hello@space13.to. Only the TOS13 team can see them. We do not sell or share them with anyone else.</p>
 
 <h2>How long we keep it</h2>
-<p>We keep your answers for as long as the fieldlab runs and delete them by 31 December 2027, unless you become an associate partner and we agree otherwise with you.</p>
+<p>We keep your answers for 10 years. You can ask us to remove your personal details (your name, email address and role) at any time, and we will delete them.</p>
 
 <h2>Your rights</h2>
-<p>You can ask to see, correct or delete your details, or withdraw a choice you made, at any time by emailing <a href="mailto:hello@space13.to">hello@space13.to</a>. If you are unhappy with how we handle your data, you can complain to the Dutch Data Protection Authority (Autoriteit Persoonsgegevens).</p>
+<p>You can ask to see, correct or delete your details, or withdraw a choice you made, at any time by emailing <a href="mailto:privacy@space13.to">privacy@space13.to</a>. If you are unhappy with how we handle your data, you can complain to the Dutch Data Protection Authority (Autoriteit Persoonsgegevens).</p>
 
 <h2>This website</h2>
 <p>This site does not use cookies or tracking. It loads its font from Google Fonts, so your browser connects to Google's servers to fetch it.</p>

@@ -691,6 +691,201 @@ body {
   text-decoration: none;
 }
 
+/* === Join form and text pages === */
+.join h1,
+.prose-page h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--black);
+  margin-bottom: 0.75rem;
+}
+
+.prose-page .prose h2 {
+  font-size: 1.1rem;
+  margin: 2rem 0 0.5rem;
+}
+
+.prose-page .prose ul {
+  margin: 0 0 1rem 1.25rem;
+  color: var(--gray-light);
+}
+
+.join,
+.prose-page {
+  margin-top: 2rem;
+}
+
+.join-notice {
+  padding: 1rem 1.25rem;
+  background: var(--yellow-light);
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+
+.join-form {
+  max-width: 760px;
+}
+
+.join-form fieldset {
+  border: 0;
+  margin: 0 0 2.5rem;
+}
+
+.join-form > fieldset > legend {
+  display: block;
+  width: 100%;
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.25rem;
+  border-bottom: 1px solid rgba(0,0,0,0.12);
+}
+
+.join-form .choice-group {
+  margin-bottom: 1.5rem;
+}
+
+.join-form .choice-group > legend,
+.field {
+  display: block;
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+.field {
+  margin-bottom: 1.25rem;
+}
+
+.field--compact {
+  margin-top: 0.75rem;
+  font-weight: 500;
+}
+
+.req {
+  color: var(--gray);
+}
+
+.hint {
+  font-weight: 400;
+  color: var(--gray);
+}
+
+.field input,
+.field textarea {
+  display: block;
+  width: 100%;
+  margin-top: 0.4rem;
+  padding: 0.7rem 0.9rem;
+  font: inherit;
+  font-weight: 400;
+  color: var(--black);
+  background: var(--white);
+  border: 1px solid rgba(0,0,0,0.25);
+  border-radius: 8px;
+}
+
+.field textarea {
+  resize: vertical;
+}
+
+.field input:focus,
+.field textarea:focus,
+.choice input:focus-visible {
+  outline: 2px solid var(--black);
+  outline-offset: 2px;
+}
+
+.field-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 1.25rem;
+}
+
+.field-row--3 {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.choices {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.choices--2 {
+  grid-template-columns: 1fr 1fr;
+  column-gap: 1.25rem;
+}
+
+.choices--inline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+}
+
+.choice {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.choice input {
+  flex-shrink: 0;
+  width: 1.1rem;
+  height: 1.1rem;
+  margin-top: 0.15rem;
+  accent-color: var(--black);
+}
+
+.consent {
+  display: grid;
+  gap: 0.75rem;
+  padding: 1.25rem 1.5rem;
+  background: var(--yellow-light);
+  border-radius: 10px;
+}
+
+.join-form .btn {
+  border: 0;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+}
+
+.join-form .btn:disabled {
+  opacity: 0.5;
+  cursor: wait;
+}
+
+.join-status {
+  margin-top: 1rem;
+  min-height: 1.5em;
+  font-weight: 600;
+}
+
+.join-thanks {
+  max-width: 760px;
+  padding: 2rem;
+  background: var(--yellow-light);
+  border-radius: 10px;
+}
+
+.join-thanks h2 {
+  margin-bottom: 0.5rem;
+}
+
+/* Spam trap: kept out of sight and out of the tab order; people never fill it in. */
+.trap {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 /* === Footer === */
 .site-footer {
   background: var(--yellow);
@@ -890,6 +1085,12 @@ body {
 
   .consortium-group--wide li:last-child {
     border-bottom: 0;
+  }
+
+  .field-row,
+  .field-row--3,
+  .choices--2 {
+    grid-template-columns: 1fr;
   }
 
   .logo-wall {

@@ -1,8 +1,12 @@
 /**
  * TOS13 join form backend (Google Apps Script web app).
  *
- * Receives submissions from https://space13.to/join/, adds one row per submission to
- * the "TOS13 join form responses" sheet and emails NOTIFY_EMAIL.
+ * Receives the join form (https://space13.to/join/): adds one row per
+ * submission to the first tab of the "TOS13 join form responses" sheet and
+ * emails NOTIFY_EMAIL.
+ * Receives the unsubscribe form (https://space13.to/unsubscribe/): stops
+ * newsletter emails to that address, logs the request on the Unsubscribe tab
+ * and emails NOTIFY_EMAIL. Responses stay in the sheet.
  * Setup steps are in README.md next to this file.
  */
 
@@ -19,18 +23,20 @@ const COLUMNS = [
   'tell_match', 'team_notes',
 ];
 
-// Filled in by the team when comparing with TELL, never by the form.
-const TEAM_COLUMNS = ['tell_match', 'team_notes'];
-
-// Number-like answers that must stay text, e.g. a KvK number starting with 0.
-const TEXT_COLUMNS = ['kvk'];
+// Filled in afterwards (KvK lookup, comparison with TELL), never by the form.
+const TEAM_COLUMNS = ['kvk', 'tell_match', 'team_notes'];
 
 const REQUIRED = ['name', 'email', 'trade_name', 'website', 'city', 'tier', 'tags', 'consent_privacy'];
 
-// A person needs more than this to fill in the form; faster means a bot.
+// A person needs more than this to fill in the join form; faster means a bot.
 const MIN_FILL_SECONDS = 3;
 
 const MAX_LENGTH = 2000;
+
+const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+const UNSUBSCRIBE_SHEET = 'Unsubscribe';
+const UNSUBSCRIBE_COLUMNS = ['submitted_at', 'email', 'responses_updated'];
 
 function doPost(e) {
   const params = (e && e.parameters) || {};
@@ -40,22 +46,26 @@ function doPost(e) {
     .filter(Boolean)
     .join('; ');
 
-  // Spam traps: answer bots with success so they don't retry, but store nothing.
+  // Spam trap: answer bots with success so they don't retry, but store nothing.
   if (value('fax')) return reply_({ ok: true });
+
+  return value('form') === 'unsubscribe' ? unsubscribe_(value) : join_(value);
+}
+
+function join_(value) {
+  // Filled in faster than a person could: treat as a bot, as above. Not used
+  // for unsubscribing, which takes one click when the address is prefilled.
   const startedAt = Number(value('started_at'));
   if (startedAt && Date.now() - startedAt < MIN_FILL_SECONDS * 1000) return reply_({ ok: true });
 
   const missing = REQUIRED.filter(key => !value(key));
   if (missing.length) return reply_({ ok: false, error: 'Missing: ' + missing.join(', ') });
-  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value('email'))) {
-    return reply_({ ok: false, error: 'Invalid email address' });
-  }
+  if (!EMAIL_PATTERN.test(value('email'))) return reply_({ ok: false, error: 'Invalid email address' });
 
   const row = COLUMNS.map(key => {
     if (key === 'submitted_at') return new Date();
     if (TEAM_COLUMNS.includes(key)) return '';
-    const text = asCellText_(value(key));
-    return TEXT_COLUMNS.includes(key) && text ? "'" + text : text;
+    return asCellText_(value(key));
   });
 
   const lock = LockService.getScriptLock();
@@ -70,6 +80,55 @@ function doPost(e) {
 
   notify_(value);
   return reply_({ ok: true });
+}
+
+function unsubscribe_(value) {
+  const email = value('email').toLowerCase();
+  if (!EMAIL_PATTERN.test(email)) return reply_({ ok: false, error: 'Invalid email address' });
+
+  let updated = 0;
+  const lock = LockService.getScriptLock();
+  lock.waitLock(10000);
+  try {
+    const spreadsheet = SpreadsheetApp.getActiveSpreadsheet();
+    updated = stopNewsletter_(spreadsheet.getSheets()[0], email);
+    const log = spreadsheet.getSheetByName(UNSUBSCRIBE_SHEET)
+      || spreadsheet.insertSheet(UNSUBSCRIBE_SHEET, spreadsheet.getSheets().length);
+    if (log.getLastRow() === 0) log.appendRow(UNSUBSCRIBE_COLUMNS);
+    log.appendRow([new Date(), asCellText_(email), updated]);
+  } finally {
+    lock.releaseLock();
+  }
+
+  MailApp.sendEmail({
+    to: NOTIFY_EMAIL,
+    subject: 'TOS13 unsubscribe: ' + email.replace(/[\r\n]+/g, ' '),
+    body: email + ' asked to stop receiving TOS13 emails.\n'
+      + 'consent_newsletter set to No on ' + updated + ' response(s); the responses stay in the sheet.\n'
+      + 'If the newsletter is sent from another tool, remove the address there too.\n\n'
+      + 'Responses and the unsubscribe log: ' + SpreadsheetApp.getActiveSpreadsheet().getUrl(),
+  });
+  // The same answer whether or not the address is in the sheet, so the form
+  // can't be used to find out who is on the list.
+  return reply_({ ok: true });
+}
+
+// Sets consent_newsletter to "No" on every response from this address and
+// returns how many rows changed. Nothing else in the rows is touched.
+function stopNewsletter_(sheet, email) {
+  const rowCount = sheet.getLastRow() - 1;
+  if (rowCount < 1) return 0;
+  const emailIndex = COLUMNS.indexOf('email');
+  const newsletterIndex = COLUMNS.indexOf('consent_newsletter');
+  const rows = sheet.getRange(2, 1, rowCount, COLUMNS.length).getValues();
+  let changed = 0;
+  rows.forEach((row, i) => {
+    if (String(row[emailIndex]).trim().toLowerCase() === email && row[newsletterIndex] !== 'No') {
+      sheet.getRange(i + 2, newsletterIndex + 1).setValue('No');
+      changed++;
+    }
+  });
+  return changed;
 }
 
 // Opening the web app URL in a browser shows this, which confirms the deployment works.

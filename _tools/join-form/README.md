@@ -30,5 +30,13 @@ textile companies, so each response can be matched against it: by website
 first, then name and city. `kvk`, `tell_match` and `team_notes` are for the
 team (the KvK number is looked up, not asked); the form never fills them.
 
+## Unsubscribe
+
+`/unsubscribe/` posts to the same web app with `form=unsubscribe`. The script
+sets `consent_newsletter` to `No` on every response from that address (the
+responses themselves stay), logs the request on the **Unsubscribe** tab and
+emails hello@space13.to. Newsletter emails can link to
+`https://space13.to/unsubscribe/?email=<address>` to fill in the address.
+
 Only organisations that ticked `consent_tell` may be passed on to NewTexEco
 for TELL, and only their organisation columns, never name, email or role.

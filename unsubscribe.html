@@ -1,0 +1,39 @@
+---
+layout: default
+title: Unsubscribe · Textile Opportunity Space 13
+description: "Stop receiving the TOS13 newsletter."
+permalink: /unsubscribe/
+---
+
+<section class="section section--white join">
+<div class="container">
+<h1>Unsubscribe</h1>
+<p class="section-intro">Enter your email address and we will stop sending you the TOS13 newsletter.</p>
+
+{%- assign endpoint = site.join_form_endpoint | default: "" -%}
+{% if endpoint == "" %}
+<p class="join-notice">This form is not connected yet. Until it is, email us at <a href="mailto:hello@space13.to">hello@space13.to</a>.</p>
+{% endif %}
+
+<form id="unsubscribe-form" class="join-form" action="{{ site.join_form_endpoint }}" method="post" data-thanks="unsubscribe-thanks">
+<input type="hidden" name="form" value="unsubscribe">
+<label class="field">Email address <span class="req">*</span>
+<input type="email" name="email" autocomplete="email" required></label>
+
+<div class="trap" aria-hidden="true">
+<label>Leave this empty <input type="text" name="fax" tabindex="-1" autocomplete="off"></label>
+</div>
+<input type="hidden" name="started_at" value="">
+
+<button type="submit" class="btn">Unsubscribe</button>
+<p class="form-status" role="status" aria-live="polite"></p>
+</form>
+
+<div id="unsubscribe-thanks" class="form-thanks" hidden tabindex="-1">
+<h2>You are unsubscribed</h2>
+<p>We will not send the newsletter to this address any more. Changed your mind? Email <a href="mailto:hello@space13.to">hello@space13.to</a>.</p>
+</div>
+</div>
+</section>
+
+<script src="{{ '/assets/js/form.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>

@@ -856,20 +856,20 @@ body {
   cursor: wait;
 }
 
-.join-status {
+.form-status {
   margin-top: 1rem;
   min-height: 1.5em;
   font-weight: 600;
 }
 
-.join-thanks {
+.form-thanks {
   max-width: 760px;
   padding: 2rem;
   background: var(--yellow-light);
   border-radius: 10px;
 }
 
-.join-thanks h2 {
+.form-thanks h2 {
   margin-bottom: 0.5rem;
 }
 

@@ -21,7 +21,7 @@ permalink: /join/
 <p class="join-notice">The form is not connected yet. Until it is, email us at <a href="mailto:hello@space13.to">hello@space13.to</a>.</p>
 {% endif %}
 
-<form id="join-form" class="join-form" action="{{ site.join_form_endpoint }}" method="post">
+<form id="join-form" class="join-form" action="{{ site.join_form_endpoint }}" method="post" data-thanks="join-thanks">
 
 <fieldset>
 <legend>About you</legend>
@@ -56,7 +56,7 @@ permalink: /join/
 <input type="number" name="year_start" min="1800" max="{{ 'now' | date: '%Y' }}" step="1" inputmode="numeric"></label>
 </div>
 
-<fieldset class="choice-group" id="tier-group">
+<fieldset class="choice-group" data-require-one>
 <legend>Where are you in the textile value chain? <span class="req">*</span> <span class="hint">Choose all that apply.</span></legend>
 <div class="choices choices--2">
 {%- for tier in tiers %}
@@ -123,7 +123,7 @@ permalink: /join/
 
 <fieldset class="choice-group consent" aria-label="Consent">
 <label class="choice"><input type="checkbox" name="consent_privacy" value="Yes" required> <span>I agree that TOS13 stores my answers to follow up on this request, as described in the <a href="{{ '/privacy/' | relative_url }}">privacy statement</a>. <span class="req">*</span></span></label>
-<label class="choice"><input type="checkbox" name="consent_newsletter" value="Yes"> <span>Send me the monthly TOS13 newsletter.</span></label>
+<label class="choice"><input type="checkbox" name="consent_newsletter" value="Yes"> <span>Send me the monthly TOS13 newsletter. You can <a href="{{ '/unsubscribe/' | relative_url }}">unsubscribe</a> at any time.</span></label>
 <label class="choice"><input type="checkbox" name="consent_tell" value="Yes"> <span>NewTexEco may use my organisation's details (not my personal details) to add or update it on TELL.</span></label>
 </fieldset>
 
@@ -133,14 +133,14 @@ permalink: /join/
 <input type="hidden" name="started_at" value="">
 
 <button type="submit" class="btn">Send</button>
-<p id="join-status" class="join-status" role="status" aria-live="polite"></p>
+<p class="form-status" role="status" aria-live="polite"></p>
 </form>
 
-<div id="join-thanks" class="join-thanks" hidden tabindex="-1">
+<div id="join-thanks" class="form-thanks" hidden tabindex="-1">
 <h2>Thank you</h2>
 <p>We have received your details and will get back to you at the email address you gave. Questions in the meantime? Email <a href="mailto:hello@space13.to">hello@space13.to</a>.</p>
 </div>
 </div>
 </section>
 
-<script src="{{ '/assets/js/join.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
+<script src="{{ '/assets/js/form.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>

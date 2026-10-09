@@ -91,12 +91,6 @@ partners:
     logo: /assets/images/partners/nxp.png
     width: 111
     height: 38
-  # Solid mark, so set a little smaller than the equal-area rule gives.
-  - name: "Patience Studio"
-    url: https://patience.studio/
-    logo: /assets/images/partners/patience-studio.svg
-    width: 27
-    height: 44
 
 funder:
   name: "CLICKNL"
@@ -104,3 +98,11 @@ funder:
   logo: /assets/images/partners/clicknl.png
   width: 180
   height: 46
+
+# Partners outside the consortium, shown in their own footer block.
+communication:
+  - name: "Patience Studio"
+    url: https://patience.studio/
+    logo: /assets/images/partners/patience-studio.svg
+    width: 28
+    height: 46

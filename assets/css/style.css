@@ -938,14 +938,29 @@ body {
   margin: 1rem auto 0;
 }
 
-/* 18 partners: 6 columns on desktop, 3 on tablets, 2 on phones, so every row is full. */
+/* Up to 6 logos per row on desktop, 3 on tablets, 2 on phones; a part-filled
+   last row is centred. */
 .logo-wall {
+  --per-row: 6;
+  --col-gap: 1rem;
   list-style: none;
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
-  justify-items: center;
-  gap: 2.25rem 1rem;
+  gap: 2.25rem var(--col-gap);
+}
+
+.logo-wall li {
+  flex: 0 0 calc((100% - (var(--per-row) - 1) * var(--col-gap)) / var(--per-row));
+  display: flex;
+  justify-content: center;
+}
+
+/* Let a logo wider than its cell shrink instead of overflowing it. */
+.logo-wall li > a {
+  min-width: 0;
+  max-width: 100%;
 }
 
 .footer-logo {
@@ -1029,7 +1044,7 @@ body {
   }
 
   .logo-wall {
-    grid-template-columns: repeat(3, 1fr);
+    --per-row: 3;
   }
 
   .wp-card {
@@ -1132,7 +1147,7 @@ body {
   }
 
   .logo-wall {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.75rem 1rem;
+    --per-row: 2;
+    row-gap: 1.75rem;
   }
 }

@@ -957,6 +957,15 @@ body {
   justify-content: center;
 }
 
+/* A short row of logos, such as the communication partners. */
+.footer-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem 2.5rem;
+}
+
 /* Let a logo wider than its cell shrink instead of overflowing it. */
 .logo-wall li > a {
   min-width: 0;

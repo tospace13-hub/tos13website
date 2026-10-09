@@ -86,6 +86,17 @@
         </ul>
       </div>
 
+      <div class="footer-block">
+        <h2 class="label">Communication partner</h2>
+        <div class="footer-logos">
+          {% for partner in site.data.partners.communication %}
+          <a href="{{ partner.url }}" class="footer-logo" target="_blank" rel="noopener">
+            <img src="{{ partner.logo | relative_url }}" alt="{{ partner.name }}" width="{{ partner.width }}" height="{{ partner.height }}" loading="lazy">
+          </a>
+          {% endfor %}
+        </div>
+      </div>
+
       <div class="footer-thanks">
         <h2 class="label">With thanks to</h2>
         <div class="thanks-logos">

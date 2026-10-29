@@ -22,6 +22,8 @@ permalink: /ai/
 <ul>
 <li><strong>Elevate</strong> develops AI-supported assessment of used garments from photos, to route each garment to repair, reuse, resale, upcycling or recycling.</li>
 <li><strong>Encode</strong> develops an orchestration platform that matches questions from textile companies to the knowledge and capacity of other organisations in the sector.</li>
+<li><strong>Distill</strong> uses AI to interpret settings, telemetry and process data read from production machines, so that production knowledge can be reused.</li>
+<li><strong>Enable</strong> uses AI to support the design and configuration of modular machines that simulate industrial processes at small scale.</li>
 </ul>
 
 <h2>How we apply the AI Act</h2>

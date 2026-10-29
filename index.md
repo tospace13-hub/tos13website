@@ -85,7 +85,7 @@ layout: default
 </div>
 <div class="stats stats--compact">
 <div class="stat">
-<span class="stat-value">3</span>
+<span class="stat-value">4</span>
 <p>work packages</p>
 </div>
 <div class="stat">
@@ -102,8 +102,8 @@ layout: default
 
 <section class="section section--yellow" id="work-packages">
 <div class="container">
-<h2>Three work packages</h2>
-<p class="section-intro">Three work packages follow textile data from design to production to second life, around three goals: connecting the sector, digitising analogue manufacturing and extending the useful life of textiles.</p>
+<h2>Four work packages</h2>
+<p class="section-intro">Four work packages follow textile data from design to production to second life, around four goals: connecting the sector, capturing what machines and operators know, extending the useful life of textiles, and building the machines that put that data back to work.</p>
 <div class="wp-grid">
 <article class="phase-card wp-card">
 <div class="wp-main">
@@ -111,10 +111,6 @@ layout: default
 <h3>Encode</h3>
 <p class="wp-lead">Helping textile companies find each other and share DPP-ready data.</p>
 <p>An orchestration platform that connects Dutch circular textile partners through the TELL data infrastructure. It maps partners to the steps of the Digital Product Passport and matches SME questions to the right knowledge and capacity.</p>
-<dl class="wp-meta">
-<dt>Partners</dt>
-<dd>TU/e, Fashion Tech Farm, EnhanceThat, HvA, NewTexEco Partners, TextielLab Tilburg</dd>
-</dl>
 </div>
 <div class="wp-side">
 <div class="wp-usecase">
@@ -132,19 +128,15 @@ layout: default
 </article>
 <article class="phase-card wp-card">
 <div class="wp-main">
-<span class="phase-number">02 · Make</span>
+<span class="phase-number">02 · Capture</span>
 <h3>Distill</h3>
 <p class="wp-lead">Turning the tacit knowledge of machines and operators into reusable data.</p>
-<p>Data-enabled hybrid digital-physical manufacturing that plugs into digital supply chains and digital twins, making machines and production know-how digitally accessible for small-batch making.</p>
-<dl class="wp-meta">
-<dt>Partners</dt>
-<dd>TU/e, Hollanders Printing Solutions, Vlisco, Vodde, TextielLab Tilburg, Saxion</dd>
-</dl>
+<p>Getting information out of production machines and into AI that can use it. Machine settings, textile construction and the decisions operators make become data that plugs into digital supply chains and digital twins, instead of retiring with the people who hold it.</p>
 </div>
 <div class="wp-side">
 <div class="wp-usecase">
 <span class="label">Use case</span>
-<p>Vlisco: a modular textile/print prototyping machine for small-batch wax prints, built on production and digital-twin data.</p>
+<p>Reading settings and telemetry off working production machines, so that a run can be repeated without starting again from trial and error.</p>
 </div>
 <span class="label">What we deliver</span>
 <ul class="wp-list">
@@ -161,15 +153,11 @@ layout: default
 <h3>Elevate</h3>
 <p class="wp-lead">Routing every used garment to its highest-value next life.</p>
 <p>A traffic-control system for value retention: AI-supported assessment decides between repair, reuse, resale, upcycling and recycling.</p>
-<dl class="wp-meta">
-<dt>Partners</dt>
-<dd>TU/e, ValueSort.ai, United Repair Centre, Stichting TexPlus, NXP Semiconductors, Saxion, ArtEZ, VNYX</dd>
-</dl>
 </div>
 <div class="wp-side">
 <div class="wp-usecase">
 <span class="label">Use case</span>
-<p>United Repair Centre: automated intake and damage assessment from garment photos, smart job routing and before/after quality control.</p>
+<p>Automated intake and damage assessment from garment photos, smart job routing across repair hubs, and before/after quality control.</p>
 </div>
 <span class="label">What we deliver</span>
 <ul class="wp-list">
@@ -177,6 +165,27 @@ layout: default
 <li>Labelled image dataset for damage classification</li>
 <li>Validated routing criteria across the R-ladder</li>
 <li>Evidence protocols for EPR reporting</li>
+</ul>
+</div>
+</article>
+<article class="phase-card wp-card">
+<div class="wp-main">
+<span class="phase-number">04 · Build</span>
+<h3>Enable</h3>
+<p class="wp-lead">Machines that put industrial processes within reach of small producers.</p>
+<p>AI-supported design of modular machines, changeable like building blocks, that simulate heavy industrial processes at small scale. A process that normally needs a full production line becomes something an SME can run, test and adapt on a bench.</p>
+</div>
+<div class="wp-side">
+<div class="wp-usecase">
+<span class="label">Use case</span>
+<p>A bench-scale rig that simulates the industrial wax print process, assembled from modules that can be reconfigured for other processes.</p>
+</div>
+<span class="label">What we deliver</span>
+<ul class="wp-list">
+<li>Modular machine architecture and a reusable module library</li>
+<li>Working bench-scale rig for small-batch wax print</li>
+<li>AI-supported method for configuring machines to a process</li>
+<li>Route for SMEs to specify and commission their own machines</li>
 </ul>
 </div>
 </article>
@@ -188,19 +197,23 @@ layout: default
 <section class="section section--white" id="demonstrator">
 <div class="container">
 <h2>One integrated demonstrator</h2>
-<p class="section-intro">The work packages meet in one demonstrator at the Textile Campus Tilburg, where data travels from design to second life — and back.</p>
-<ol class="flow">
+<p class="section-intro">The work packages meet in one demonstrator at the Textile Campus Tilburg, where data travels from design to second life, and back into the machines.</p>
+<ol class="flow flow--4">
 <li>
 <span class="flow-step">01 · Encode</span>
 <p>Shared data model and partner capacity</p>
 </li>
 <li>
 <span class="flow-step">02 · Distill</span>
-<p>Product, material and construction data</p>
+<p>Product, material and machine data from the shop floor</p>
 </li>
 <li>
 <span class="flow-step">03 · Elevate</span>
-<p>Condition and repair data feeds back into design</p>
+<p>Condition and repair data from second life</p>
+</li>
+<li>
+<span class="flow-step">04 · Enable</span>
+<p>Machines built to turn that data back into production</p>
 </li>
 </ol>
 </div>

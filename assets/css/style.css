@@ -536,6 +536,11 @@ body {
   gap: 2.5rem;
 }
 
+.flow--4 {
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
 .flow li {
   position: relative;
   padding: 1.75rem 1.5rem;
@@ -1033,6 +1038,17 @@ body {
 }
 
 /* === Responsive === */
+@media (max-width: 1000px) {
+  .flow--4 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .flow--4 li + li::before {
+    content: none;
+  }
+}
+
 @media (max-width: 768px) {
   .hero h1 {
     font-size: 2rem;
@@ -1070,6 +1086,10 @@ body {
     left: 50%;
     top: -1.85rem;
     transform: translateX(-50%);
+  }
+
+  .flow--4 li + li::before {
+    content: '↓';
   }
 }
 

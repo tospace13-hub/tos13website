@@ -178,12 +178,12 @@ layout: default
 <div class="wp-side">
 <div class="wp-usecase">
 <span class="label">Use case</span>
-<p>A bench-scale rig that simulates the industrial wax print process, assembled from modules that can be reconfigured for other processes.</p>
+<p>A bench-scale rig that simulates an industrial textile printing process, assembled from modules that can be reconfigured for other processes.</p>
 </div>
 <span class="label">What we deliver</span>
 <ul class="wp-list">
 <li>Modular machine architecture and a reusable module library</li>
-<li>Working bench-scale rig for small-batch wax print</li>
+<li>Working bench-scale rig for small-batch textile printing</li>
 <li>AI-supported method for configuring machines to a process</li>
 <li>Route for SMEs to specify and commission their own machines</li>
 </ul>
